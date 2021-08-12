@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         metadata-complete="true" version="3.0">
+    <display-name>Daimler</display-name>
+
+    <servlet>
+        <servlet-name>provider</servlet-name>
+        <servlet-class>dev.kaira.controller.InfoProvider</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>receiver</servlet-name>
+        <servlet-class>dev.kaira.controller.PlayerDataReceiver</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adviser</servlet-name>
+        <servlet-class>dev.kaira.controller.TossAdviser</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>provider</servlet-name>
+        <url-pattern>/info</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>receiver</servlet-name>
+        <url-pattern>/action</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adviser</servlet-name>
+        <url-pattern>/randomitem</url-pattern>
+    </servlet-mapping>
+
+</web-app>
